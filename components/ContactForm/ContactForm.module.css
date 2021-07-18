@@ -1,0 +1,103 @@
+.container {
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  margin-left: 1rem;
+}
+
+.form {
+  width: 70%;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.message {
+  resize: none;
+  height: 150px;
+}
+
+.btn {
+  margin: 1rem 0rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  border: 2px solid #fff;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* border-radius: 5px; */
+  position: relative;
+  float: right;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+}
+
+.arrowIcon {
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover > .arrowIcon {
+  transform: translateX(20px);
+}
+
+/* Set up grid areas */
+.name {
+  grid-area: name;
+}
+.email {
+  grid-area: email;
+}
+.subject {
+  grid-area: subject;
+}
+.message {
+  grid-area: message;
+}
+.submit {
+  grid-area: submit;
+}
+.form {
+  display: grid;
+  grid-template: 50px 50px 150px / 1fr 1fr;
+  grid-template-areas:
+    "name email"
+    "subject subject"
+    "message message"
+    "submit submit";
+  gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .form {
+    width: 80vw;
+  }
+}

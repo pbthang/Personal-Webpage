@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap");
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+  padding-right: 0;
+  color: #fff;
+  background-image: url(../../public/homeCover.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.homeCover {
+  z-index: -1;
+}
+
+.text {
+  font-size: 4rem;
+  font-family: "Source Code Pro";
+  font-weight: 700;
+}
+
+.typewriter {
+  display: inline !important;
+}
+
+@media screen and (max-width: 800px) {
+  .text {
+    font-size: 6vw;
+  }
+  .container {
+    padding-left: 10vw;
+  }
+}
