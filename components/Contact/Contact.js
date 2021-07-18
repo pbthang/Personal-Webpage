@@ -8,7 +8,6 @@ function Contact({ contact }) {
     <div className={styles.container} id="Contact">
       <h2 className={`${styles.title} title`}>Contact</h2>
       <ContactForm />
-      {/* <hr className={styles.divider} /> */}
       <div className={styles.footer}>
         {contact.map((item, idx) =>
           !!item.link ? (

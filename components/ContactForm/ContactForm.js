@@ -11,11 +11,7 @@ function ContactForm() {
     <div className={styles.container}>
       <h3 className={styles.title}>
         Leave me a message here
-        <FontAwesomeIcon
-          icon={faCommentAlt}
-          className={styles.icon}
-          size="lg"
-        />
+        <FontAwesomeIcon icon={faCommentAlt} className={styles.icon} />
       </h3>
       <form
         id="fs-frm"

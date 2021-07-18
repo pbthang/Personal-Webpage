@@ -88,16 +88,22 @@
   gap: 1rem;
 }
 
+@media screen and (max-width: 800px) {
+  .form {
+    width: 80vw;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .form {
     display: flex;
     flex-direction: column;
     width: 80vw;
   }
-}
-
-@media screen and (max-width: 800px) {
-  .form {
-    width: 80vw;
+  .title {
+    font-size: 1.1rem;
   }
 }
