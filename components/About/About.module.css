@@ -1,4 +1,4 @@
-.container {
+.about {
   display: flex;
   justify-content: space-evenly;
   align-content: center;
@@ -29,8 +29,65 @@
   display: inherit !important;
 }
 
+.eduAndExp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 0 3rem 5rem 3rem;
+}
+
+/* ---------For the timeline ul--------- */
+.eduAndExp ul {
+  list-style: none;
+}
+.eduAndExp li {
+  position: relative;
+  padding: 10px;
+}
+.eduAndExp li:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--secondary);
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-40%);
+}
+.eduAndExp li:after {
+  content: "";
+  width: 2px;
+  height: 120%;
+  background: var(--secondary);
+  position: absolute;
+  left: -8px;
+  top: 50%;
+}
+
+.eduAndExp li:last-child::after {
+  height: 50%;
+}
+/* ----------End---------- */
+
+.expTitle {
+  font-weight: 700;
+}
+
+.eduSchool {
+  font-weight: 700;
+}
+
+.expContent {
+  font-size: 0.9rem;
+}
+
+.eduContent {
+  font-size: 0.9rem;
+}
+
 @media screen and (max-width: 800px) {
-  .container {
+  .about {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -43,5 +100,9 @@
     font-size: 1.1rem;
     padding: 1rem 1rem;
     margin: 1rem 1rem;
+  }
+  .eduAndExp {
+    grid-template-columns: 1fr;
+    padding: 0 2rem 5rem 2rem;
   }
 }

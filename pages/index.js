@@ -17,12 +17,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Contact from "../components/Contact";
 
-export default function App({ navItems, skills, projects, contact }) {
+export default function App(props) {
+  const { navItems, education, experience, skills, projects, contact } = props;
+
   return (
     <>
       <Navbar navItems={navItems} />
       <Home />
-      <About />
+      <About education={education} experience={experience} />
       <Skills skills={skills} />
       <Projects projects={projects} />
       <Contact contact={contact} />
@@ -40,6 +42,35 @@ export const getStaticProps = () => {
         { label: "Skills", linkTo: "Skills" },
         { label: "Projects", linkTo: "Projects" },
         { label: "Contact", linkTo: "Contact" },
+      ],
+      education: [
+        {
+          school: "National University of Singapore",
+          time: "2020-2024",
+          location: "Singapore",
+          major: "Computer Science",
+        },
+        {
+          school: "Hanoi - Amsterdam High School for the Gifted",
+          time: "2017-2020",
+          location: "Hanoi, Vietnam",
+          major: "Physics",
+        },
+      ],
+      experience: [
+        {
+          title: "Teaching Assistant",
+          organization: "National University of Singapore",
+          time: "AY21/22 Sem1",
+          description: "Tutoring a class of 8 for the module CS1101S",
+        },
+        {
+          title: "Physics Mentor",
+          organization: "G-college Singapore (non-profit)",
+          time: "2020-now",
+          description:
+            "Teaching Physics for Vietnamese students who want to study overseas",
+        },
       ],
       skills: [
         {
@@ -78,8 +109,14 @@ export const getStaticProps = () => {
         {
           imgSrc: "/personalWebsite.jpg",
           label: "Personal Website",
-          description: "This is my personal website which I made using NextJS",
-          githubLink: "https://github.com/pbthang/",
+          description: "This is my personal website which I made using NextJS.",
+          githubLink: "https://github.com/pbthang/Personal-Webpage",
+        },
+        {
+          imgSrc: "/discordBot.jpg",
+          label: "Daily Dose of Jokes",
+          description: "A simple Discord bot that tells jokes.",
+          githubLink: "https://github.com/pbthang/Daily-Dose-of-Jokes",
         },
       ],
       contact: [
