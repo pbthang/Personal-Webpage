@@ -8,6 +8,7 @@ import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 function Projects({ projects }) {
   const config = {
     adaptiveHeight: false,
+    dots: true,
     arrows: true,
     autoplay: true,
     autoplaySpeed: 5000,
