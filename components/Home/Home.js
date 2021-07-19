@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./Home.module.css";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   const info = ["Software Engineer.", "CS student.", "Vietnamese."];
@@ -31,6 +34,20 @@ function Home() {
           }}
         />
       </div>
+      <Link
+        to="About"
+        smooth={true}
+        spy={true}
+        duration={1000}
+        offset={-60}
+        className={styles.nextSectionIcon}
+      >
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          size="lg"
+          className={styles.icon}
+        />
+      </Link>
     </div>
   );
 }
