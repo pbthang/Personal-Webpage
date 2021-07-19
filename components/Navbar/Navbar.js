@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +8,14 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 function Navbar({ navItems }) {
   const [open, setOpen] = useState(false);
   let [transparency, setTransparency] = useState(0.0);
+
+  const linkConfig = {
+    smooth: true,
+    spy: true,
+    duration: 1000,
+    offset: -60,
+    activeClass: styles.active,
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -29,28 +37,13 @@ function Navbar({ navItems }) {
 
   return (
     <nav className={styles.container} style={transparencyStyle}>
-      <Link
-        to="Home"
-        smooth={true}
-        spy={true}
-        duration={1000}
-        offset={-60}
-        className={styles.logo}
-      >
+      <Link to="Home" {...linkConfig} className={styles.logo}>
         <Image src="/pbthang.png" alt="Pbthang" height={40} width={100} />
       </Link>
 
       <ul className={`${styles.navItems} ${open ? styles.open : styles.close}`}>
         {navItems.map((item, idx) => (
-          <Link
-            key={idx}
-            to={item.linkTo}
-            smooth={true}
-            spy={true}
-            duration={1000}
-            offset={-60}
-            activeClass={styles.active}
-          >
+          <Link key={idx} to={item.linkTo} {...linkConfig}>
             <li className={styles.navItem}>{item.label}</li>
           </Link>
         ))}
