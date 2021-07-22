@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 function About({ education, experience }) {
   const imgSize = [2592, 3456];
-  const imgScale = 0.11;
+  const imgScale = 0.09;
   return (
     <div className={styles.container} id="About">
       <div className={styles.about}>

@@ -15,12 +15,12 @@
   justify-content: space-evenly;
   justify-items: stretch;
   width: 70vw;
-  grid-template: 150px 150px / 200px 200px;
+  grid-template-columns: 200px 200px;
   gap: 7rem 3rem;
 }
 
 @media screen and (max-width: 800px) {
   .skills {
-    grid-template: 150px 150px 150px 150px / 200px;
+    grid-template-columns: 200px;
   }
 }

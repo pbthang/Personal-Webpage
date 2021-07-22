@@ -11,7 +11,7 @@
 }
 
 .content {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: justify;
   margin-right: 2rem;
 }
@@ -104,5 +104,11 @@
   .eduAndExp {
     grid-template-columns: 1fr;
     padding: 0 2rem 5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    font-size: 1rem;
   }
 }
