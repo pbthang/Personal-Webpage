@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link, ScrollLink } from "react-scroll";
 import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -15,6 +15,7 @@ function Navbar({ navItems }) {
     duration: 1000,
     offset: -60,
     activeClass: styles.active,
+    isDynamic: true,
   };
 
   useEffect(() => {

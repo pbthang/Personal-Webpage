@@ -22,7 +22,7 @@
 }
 
 .img:hover {
-  box-shadow: 15px 15px 0 #fca311, -15px -15px 0 #2c3038;
+  box-shadow: 15px 15px 0 var(--secondary), -15px -15px 0 var(--primary);
 }
 
 .img div {

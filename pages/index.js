@@ -23,11 +23,13 @@ export default function App(props) {
   return (
     <>
       <Navbar navItems={navItems} />
-      <Home />
-      <About education={education} experience={experience} />
-      <Skills skills={skills} />
-      <Projects projects={projects} />
-      <Contact contact={contact} />
+      <main>
+        <Home />
+        <About education={education} experience={experience} />
+        <Skills skills={skills} />
+        <Projects projects={projects} />
+        <Contact contact={contact} />
+      </main>
       <footer className="footer">Made by Thang Pham</footer>
     </>
   );

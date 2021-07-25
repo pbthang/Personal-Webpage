@@ -8,7 +8,7 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatic
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <html lang="en">
       <Head>
         <title>Thang Pham</title>
         <meta
@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />
-    </>
+    </html>
   );
 }
 
