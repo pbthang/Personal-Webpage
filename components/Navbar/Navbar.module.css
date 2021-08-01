@@ -42,6 +42,10 @@
   cursor: pointer;
 }
 
+.navItem:hover {
+  color: #fff;
+}
+
 .navItem::after {
   content: "";
   display: block;

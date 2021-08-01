@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./About.module.css";
-import { Link, Element } from "react-scroll";
+import { Link } from "react-scroll";
 
 function About({ education, experience }) {
   const imgSize = [2592, 3456];
   const imgScale = 0.09;
   return (
-    <Element className={styles.container} name="About">
+    <section className={styles.container} id="About">
       <div className={styles.about}>
         <div className={styles.img}>
           <Image
@@ -81,7 +81,7 @@ function About({ education, experience }) {
           </ul>
         </div>
       </div>
-    </Element>
+    </section>
   );
 }
 

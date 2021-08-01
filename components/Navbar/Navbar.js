@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Link, ScrollLink } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -12,10 +12,11 @@ function Navbar({ navItems }) {
   const linkConfig = {
     smooth: true,
     spy: true,
-    duration: 1000,
-    offset: -60,
+    duration: 700,
+    offset: -59.5,
     activeClass: styles.active,
-    isDynamic: true,
+    // isDynamic: true,
+    // onClick: () => scroll.scrollMore(1),
   };
 
   useEffect(() => {
@@ -42,13 +43,20 @@ function Navbar({ navItems }) {
         <Image src="/pbthang.png" alt="Pbthang" height={40} width={100} />
       </Link>
 
-      <ul className={`${styles.navItems} ${open ? styles.open : styles.close}`}>
+      <div
+        className={`${styles.navItems} ${open ? styles.open : styles.close}`}
+      >
         {navItems.map((item, idx) => (
-          <Link key={idx} to={item.linkTo} {...linkConfig}>
-            <li className={styles.navItem}>{item.label}</li>
+          <Link
+            key={idx}
+            to={item.linkTo}
+            {...linkConfig}
+            className={styles.navItem}
+          >
+            <li>{item.label}</li>
           </Link>
         ))}
-      </ul>
+      </div>
       {open ? (
         <FontAwesomeIcon
           icon={faTimes}
