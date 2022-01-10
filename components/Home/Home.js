@@ -19,20 +19,22 @@ function Home() {
 
   return (
     <div className={styles.container} id="Home">
-      <div className={styles.text}>
-        <span>
-          Hello world.
-          <br />I am Thang Pham,
-        </span>
-        <Typewriter
-          onInit={handleTypewritingEffect}
-          options={{
-            loop: true,
-            wrapperClassName: styles.typewriter,
-            deleteSpeed: 15,
-            delay: 80,
-          }}
-        />
+      <div className={styles.responsiveWidthWrapper}>
+        <div className={styles.text}>
+          <span>
+            Hello world.
+            <br />I am Thang Pham,
+          </span>
+          <Typewriter
+            onInit={handleTypewritingEffect}
+            options={{
+              loop: true,
+              wrapperClassName: styles.typewriter,
+              deleteSpeed: 15,
+              delay: 80,
+            }}
+          />
+        </div>
       </div>
       <Link
         to="About"

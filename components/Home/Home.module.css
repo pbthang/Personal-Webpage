@@ -17,6 +17,15 @@
   background-position: center;
 }
 
+.responsiveWidthWrapper {
+  width: 100%;
+  max-width: 1200px;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  justify-self: flex-start;
+}
+
 .homeCover {
   z-index: -1;
 }

@@ -32,13 +32,13 @@ a:hover {
 .title {
   display: inline;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 0.05rem;
   transition: letter-spacing 0.5s ease;
 }
 
 .title:hover {
-  letter-spacing: 1.5vw;
+  letter-spacing: 0.3rem;
 }
 
 #skill__lang:hover > div {

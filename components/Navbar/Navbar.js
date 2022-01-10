@@ -39,39 +39,41 @@ function Navbar({ navItems }) {
 
   return (
     <nav className={styles.container} style={transparencyStyle}>
-      <Link to="Home" {...linkConfig} className={styles.logo}>
-        <Image src="/pbthang.png" alt="Pbthang" height={40} width={100} />
-      </Link>
+      <div className={styles.responsiveWidthWrapper}>
+        <Link to="Home" {...linkConfig} className={styles.logo}>
+          <Image src="/pbthang.png" alt="Pbthang" height={40} width={100} />
+        </Link>
 
-      <div
-        className={`${styles.navItems} ${open ? styles.open : styles.close}`}
-      >
-        {navItems.map((item, idx) => (
-          <Link
-            key={idx}
-            to={item.linkTo}
-            {...linkConfig}
-            className={styles.navItem}
-          >
-            <li>{item.label}</li>
-          </Link>
-        ))}
+        <div
+          className={`${styles.navItems} ${open ? styles.open : styles.close}`}
+        >
+          {navItems.map((item, idx) => (
+            <Link
+              key={idx}
+              to={item.linkTo}
+              {...linkConfig}
+              className={styles.navItem}
+            >
+              <li>{item.label}</li>
+            </Link>
+          ))}
+        </div>
+        {open ? (
+          <FontAwesomeIcon
+            icon={faTimes}
+            onClick={() => setOpen((open) => !open)}
+            size="2x"
+            className={styles.menuIcon}
+          />
+        ) : (
+          <FontAwesomeIcon
+            icon={faBars}
+            onClick={() => setOpen((open) => !open)}
+            size="2x"
+            className={styles.menuIcon}
+          />
+        )}
       </div>
-      {open ? (
-        <FontAwesomeIcon
-          icon={faTimes}
-          onClick={() => setOpen((open) => !open)}
-          size="2x"
-          className={styles.menuIcon}
-        />
-      ) : (
-        <FontAwesomeIcon
-          icon={faBars}
-          onClick={() => setOpen((open) => !open)}
-          size="2x"
-          className={styles.menuIcon}
-        />
-      )}
     </nav>
   );
 }

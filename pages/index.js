@@ -61,17 +61,24 @@ export const getStaticProps = () => {
       ],
       experience: [
         {
+          title: "Frontend Engineer Intern",
+          organization: "Crater Merch",
+          time: "Dec 21 - Jan 22",
+          description:
+            "Built effective user interfaces for the product, for both web and mobile application",
+        },
+        {
           title: "Teaching Assistant",
           organization: "National University of Singapore",
           time: "AY21/22 Sem1",
-          description: "Tutoring a class of 8 for the module CS1101S",
+          description: "Tutored a class of 8 for the module CS1101S",
         },
         {
           title: "Physics Mentor",
           organization: "G-college Singapore (non-profit)",
           time: "2020-now",
           description:
-            "Teaching Physics for Vietnamese students who want to study overseas",
+            "Taught Physics for Vietnamese students who want to study overseas",
         },
       ],
       skills: [
@@ -84,13 +91,13 @@ export const getStaticProps = () => {
         {
           icon: faReact,
           label: "Frontend Development",
-          text: "HTML, CSS, JS, React, Redux, NextJS",
+          text: "HTML, CSS, JS, React, Redux, Next.js",
           id: "skill__frontend",
         },
         {
           icon: faServer,
           label: "Backend Development",
-          text: "NodeJS, Express",
+          text: "Node.js, Express.js, SQL",
           id: "skill__backend",
         },
         {
@@ -119,6 +126,13 @@ export const getStaticProps = () => {
           label: "Daily Dose of Jokes",
           description: "A simple Discord bot that tells jokes.",
           githubLink: "https://github.com/pbthang/Daily-Dose-of-Jokes",
+        },
+        {
+          imgSrc: "/rhrh.png",
+          label: "Restaurant HR Helper",
+          description:
+            "A team project under module CS2103 Software Engineering developed using Java, JavaFX, built with Gradle",
+          githubLink: "https://github.com/AY2122S1-CS2103T-T17-1/tp",
         },
       ],
       contact: [
