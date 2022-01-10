@@ -70,15 +70,16 @@ export const getStaticProps = () => {
         {
           title: "Teaching Assistant",
           organization: "National University of Singapore",
-          time: "AY21/22 Sem1",
-          description: "Tutored a class of 8 for the module CS1101S",
+          time: "Aug 21 - present",
+          description:
+            "Tutored a class of 8 for the module CS1101S Programming Methodology",
         },
         {
           title: "Physics Mentor",
           organization: "G-college Singapore (non-profit)",
-          time: "2020-now",
+          time: "Apr 20 - present",
           description:
-            "Taught Physics for Vietnamese students who want to study overseas",
+            "Taught Physics for Vietnamese students who want to study overseas for university",
         },
       ],
       skills: [
